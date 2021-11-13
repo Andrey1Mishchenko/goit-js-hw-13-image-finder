@@ -1,0 +1,108 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: cadetblue;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.search-country {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.input {
+  background-color: rgba(161, 53, 34, 0.596);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.input::placeholder {
+  text-align: center;
+  color: black;
+}
+
+.notice {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.search-list {
+  margin: 0;
+}
+
+.search-list-item {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.country-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  // margin: 0 auto;
+  padding: 10px;
+}
+
+.country-name {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-wrapper {
+  text-align: left;
+  padding: 20px;
+}
+
+.text-wrapper p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+
+  padding: 0;
+}
+
+.list-item {
+  margin: 10px 0 10px 20px;
+}
+
+.primary-text {
+  font-weight: 500;
+}
+
+.secondary-text {
+  font-weight: 400;
+}
+
+.country-languages-list {
+  padding: 0;
+}
+
+.country-flag {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  display: block;
+  width: 300px;
+  height: auto;
+}
