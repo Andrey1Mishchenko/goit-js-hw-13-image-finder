@@ -15,94 +15,104 @@ body {
     'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.search-country {
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.search-image {
+  padding: 50px 10px;
 }
 
-.input {
+.search-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-form input {
   background-color: rgba(161, 53, 34, 0.596);
   border: 2px solid black;
   border-radius: 10px;
   padding: 10px;
-  margin-bottom: 50px;
 }
 
-.input::placeholder {
+.search-form input::placeholder {
   text-align: center;
   color: black;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  // margin-bottom: 20px;
+  list-style: none;
+  margin-left: -15px;
+  margin-bottom: -15px;
+}
+
+.gallery-item {
+  flex-basis: calc(100% / 3 - 15px);
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stats-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.material-icons {
+  margin-right: 5px;
+}
 .notice {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.search-list {
-  margin: 0;
-}
-
-.search-list-item {
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.country-card {
+.load-more {
+  display: block;
+  cursor: pointer;
+  background-color: rgba(161, 53, 34, 0.596);
   border: 2px solid black;
   border-radius: 10px;
-  // margin: 0 auto;
   padding: 10px;
+  margin: 20px auto 0;
 }
 
-.country-name {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.content-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.text-wrapper {
-  text-align: left;
-  padding: 20px;
-}
-
-.text-wrapper p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-ul {
-  margin: 0;
-
-  padding: 0;
-}
-
-.list-item {
-  margin: 10px 0 10px 20px;
-}
-
-.primary-text {
+.load-more:hover,
+.load-more:focus {
+  border-width: 3px;
   font-weight: 500;
 }
 
-.secondary-text {
-  font-weight: 400;
-}
-
-.country-languages-list {
-  padding: 0;
-}
-
-.country-flag {
-  border: 1px solid transparent;
-  border-radius: 20px;
-  display: block;
-  width: 300px;
-  height: auto;
+.is-hidden {
+  display: none;
 }
