@@ -29,6 +29,12 @@ function onSearch(evt) {
         delay: 2000,
         addClass: 'notice',
       });
+      refs.loadMoreBtnEl.classList.add('is-hidden');
+      return;
+    }
+    if (data.length < 12) {
+      refs.listEl.classList.remove('is-hidden');
+      refs.listEl.insertAdjacentHTML('beforeend', imageCardTpl(data));
       return;
     }
     showElements();
@@ -37,10 +43,14 @@ function onSearch(evt) {
 }
 
 function onBtnClick(evt) {
-  imageApi
-    .fetchImage()
-    .then(data => refs.listEl.insertAdjacentHTML('beforeend', imageCardTpl(data)));
-  setTimeout(scrollIntoView, 500);
+  imageApi.fetchImage().then(data => {
+    console.log(data.length);
+    if (data.length < 12) {
+      refs.loadMoreBtnEl.classList.add('is-hidden');
+    }
+    refs.listEl.insertAdjacentHTML('beforeend', imageCardTpl(data));
+  });
+  setTimeout(scrollIntoView, 600);
 }
 
 function scrollIntoView() {
